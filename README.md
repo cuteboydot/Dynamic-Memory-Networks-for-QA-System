@@ -5,6 +5,9 @@
 #### reference  
 1. [Ask Me Anything:Dynamic Memory Networks for Natural Language Processing](https://arxiv.org/pdf/1506.07285.pdf)  
   
+#### data reference  
+1. [bAbI, facebook](https://research.fb.com/downloads/babi/)  
+  
 ### Test result  
 본 프로젝트는 총 20종류의 데이터 중, 10번(indefinite-knowledge)과 11번(basic-coreference) 내용을 사용하였다.  
 실험 환경은 다음과 같다.  
