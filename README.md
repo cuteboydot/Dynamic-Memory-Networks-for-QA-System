@@ -8,7 +8,13 @@
 #### data reference  
 1. [bAbI, facebook](https://research.fb.com/downloads/babi/)  
   
-### Test result  
+### 1. Dynamic Memory Networks 
+<img src="./img/dymemnn.png" width="80%">  
+  
+Dynamic Memory Networks는 크게 input module, question module, memory module, answer module로 구성되어 있다.  
+
+
+### 2. Test result  
 본 프로젝트는 총 20종류의 데이터 중, 10번(indefinite-knowledge)과 11번(basic-coreference) 내용을 사용하였다.  
 실험 환경은 다음과 같다.  
 - python 3.6  
@@ -21,7 +27,7 @@
 - attention dim : 30
 - total epochs : 150  
 - batch size : 75  
-- learngin rate : 0.001  
+- learngin rate : 0.005  
   
 #### qa10 : indefinite knowledge  
 <img src="./img/qa10_result.png" width="100%">  
