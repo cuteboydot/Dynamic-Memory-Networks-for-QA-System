@@ -21,12 +21,12 @@
 - learngin rate : 0.001  
   
 #### qa10 : indefinite knowledge  
-<img src="./img/qa10_result.png" width="75%">  
-<img src="./img/qa10_acc.png" width="75%">  
+<img src="./img/qa10_result.png" width="100%">  
+<img src="./img/qa10_acc.png" width="80%">  
   
 #### qa11 : basic coreference  
-<img src="./img/qa11_result.png" width="75%">  
-<img src="./img/qa11_acc.png" width="75%">  
+<img src="./img/qa11_result.png" width="100%">  
+<img src="./img/qa11_acc.png" width="80%">  
   
 #### Tensorflow Graph  
-<img src="./img/dymemnn_graph.png" width="75%">  
+<img src="./img/dymemnn_graph.png" width="80%">  
