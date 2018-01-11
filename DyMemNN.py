@@ -293,7 +293,9 @@ with tf.Graph().as_default():
                         assert feature_dim == concat_feature_size
 
                         g = tf.tanh(tf.matmul(z, Att_W1) + Att_b1)                              # [batch, att_dim]
-                        g = tf.sigmoid(tf.matmul(g, Att_W2) + Att_b2, name="g")                 # [batch, 1]
+                        g = tf.matmul(g, Att_W2) + Att_b2                                       # [batch, 1]
+                        attention_context_list.append(g)
+                        g = tf.sigmoid(g, name="g")                                             # [batch, 1]
 
                         attention_context_list.append(g)
 
@@ -311,7 +313,7 @@ with tf.Graph().as_default():
 
                     e = final_h
 
-                    # memory update..
+                    # memory update..(basic model)
                     _, m = gru_memory(e, m_prev)
 
                     # save attention prob
@@ -322,6 +324,11 @@ with tf.Graph().as_default():
                     attention_context = tf.where(mask_nil, attention_context, -9999 * tf.ones_like(attention_context))
                     attention_context = tf.nn.softmax(attention_context)                        # [batch, story]
                     attention_list.append(attention_context)
+
+                    # memory update..(variant model using attention)
+                    attention_context_ex = tf.reshape(attention_context, [-1, max_story_len, 1])
+                    context = c * attention_context_ex                                          # [batch, story, state]
+                    #m = tf.reduce_sum(context, axis=1)                                          # [batch, state]
 
                 # summary attention prob
                 attention_map = tf.convert_to_tensor(attention_list)                            # [hop, batch, story]
