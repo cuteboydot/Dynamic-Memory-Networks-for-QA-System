@@ -30,11 +30,11 @@ Dynamic Memory Networks는 크게 input module, question module, memory module, 
 - learngin rate : 0.005  
   
 #### qa10 : indefinite knowledge  
-<img src="./img/qa10_result.png" width="100%">  
+<img src="./img/qa10_result_gru.png" width="100%">  
 <img src="./img/qa10_acc.png" width="80%">  
   
 #### qa11 : basic coreference  
-<img src="./img/qa11_result.png" width="100%">  
+<img src="./img/qa11_result_gru.png" width="100%">  
 <img src="./img/qa11_acc.png" width="80%">  
   
 #### Tensorflow Graph  
